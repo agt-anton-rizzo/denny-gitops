@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tom-config
+  namespace: denny-agents
+data:
+  AGENT_NAME: tom
+  AGENT_DISPLAY_NAME: Tom
+  AGENT_EMOJI: "\U0001F4E0"
+  AGENT_ARCHETYPE: router
+  AGENT_EMAIL: tom@denny.bot
+  GITHUB_ORG: denny-team-rizzo-org
+  DISCORD_OPERATOR_ID: "1474518941165424806"
+  DISCORD_GUILD_IDS: "1475081980998586380"
+  DISCORD_ALLOW_FROM: '["1474518941165424806"]'
+  DISCORD_ALLOW_BOTS: "false"
+  GITHUB_USERNAME: agt-zuul-rizzo
+  JIRA_INSTANCE: denny-team-rizzo
+  JIRA_EMAIL: tom@denny.bot
+  JIRA_DEFAULT_PROJECT: ""
+  JIRA_DEFAULT_BOARD: ""
+  AGE_PUBLIC_KEY: age1xa2x5q6zpcrwjq9xyh9ghmm57mvzu5d0e0yehtqujdjfyjxpe9rqu60den
