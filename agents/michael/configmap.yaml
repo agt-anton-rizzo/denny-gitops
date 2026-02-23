@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: michael-config
+  namespace: denny-agents
+data:
+  AGENT_NAME: michael
+  AGENT_DISPLAY_NAME: Michael
+  AGENT_EMOJI: "\u2615"
+  AGENT_ARCHETYPE: scrum-master
+  AGENT_EMAIL: michael@denny.bot
+  GITHUB_ORG: denny-team-rizzo-org
+  DISCORD_OPERATOR_ID: "1474518941165424806"
+  DISCORD_GUILD_IDS: "1475081980998586380"
+  DISCORD_ALLOW_FROM: '["1474518941165424806","1475210459195113626"]'
+  DISCORD_ALLOW_BOTS: "true"
+  GITHUB_USERNAME: agt-zuul-rizzo
+  JIRA_INSTANCE: denny-team-rizzo
+  JIRA_EMAIL: michael@denny.bot
+  JIRA_DEFAULT_PROJECT: ""
+  JIRA_DEFAULT_BOARD: ""
+  AGE_PUBLIC_KEY: age1xa2x5q6zpcrwjq9xyh9ghmm57mvzu5d0e0yehtqujdjfyjxpe9rqu60den
