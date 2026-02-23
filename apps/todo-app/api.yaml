@@ -5,6 +5,8 @@ metadata:
   namespace: todo-app
   labels:
     app: todo-api
+    app.kubernetes.io/name: todo-api
+    app.kubernetes.io/component: backend
 spec:
   replicas: 1
   selector:
@@ -14,8 +16,13 @@ spec:
     metadata:
       labels:
         app: todo-api
+        app.kubernetes.io/name: todo-api
+        app.kubernetes.io/component: backend
     spec:
       initContainers:
+        - name: wait-for-db
+          image: busybox:1.36
+          command: ["sh", "-c", "until nc -z postgres 5432; do echo 'waiting for postgres...'; sleep 2; done"]
         - name: migrate
           image: ghcr.io/denny-team-rizzo-org/todo-app-api:latest
           command: ["npx", "prisma", "migrate", "deploy", "--schema", "packages/api/prisma/schema.prisma"]

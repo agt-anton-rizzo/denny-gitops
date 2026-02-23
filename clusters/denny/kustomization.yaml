@@ -4,4 +4,4 @@ resources:
   - flux-system
   - infrastructure.yaml
   - agents.yaml
-  - apps.yaml
+  - todo-app.yaml
